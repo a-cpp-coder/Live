@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   # get "up" => "rails/health#show", as: :rails_health_check
   root "articles#index"
 
-  get "/articles", to: "articles#index"
+  # get "/articles", to: "articles#index"
+  # get "/articles/:id", to: "articles#show"
+  
+  # Whenever we have such a combination of routes, controller actions, and views that work together to perform CRUD operations on an entity, we call that entity a resource.
+  resources :articles # it's a ruby dsl(domain specific language), also in rails db, :articles is a symbol
 
   # Defines the root path route ("/")
   # root "posts#index"
