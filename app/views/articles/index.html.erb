@@ -7,9 +7,17 @@
     <% @articles.each do |article| %>
         <li>
             <%# <a href="/articles/<%= article.id %>
-            <a href=<%= article_path(article) %>>
+            <%
+=begin%>
+ <a href=<%= article_path(article) %>>
             <%= article.title %>
-            </a>
+            </a> 
+<%
+=end%>
+            <%# link to helper need to read carefully, take the 1st arg as the link, the 2nd arg as destination -> call article_path(article) -> call "articles/article.id"> %>
+            <%= lint_to article.title, article %>
+
+
             <%#
             <br/>
             <%= article.body %> 
