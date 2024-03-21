@@ -15,7 +15,7 @@
 <%
 =end%>
             <%# link to helper need to read carefully, take the 1st arg as the link, the 2nd arg as destination -> call article_path(article) -> call "articles/article.id"> %>
-            <%= lint_to article.title, article %>
+            <%= link_to article.title, article %>
 
 
             <%#
@@ -24,3 +24,5 @@
         </li>
     <% end %>
 </ul>
+
+<%= link_to "New Article", new_article_path %>
