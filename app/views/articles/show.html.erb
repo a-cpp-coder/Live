@@ -3,4 +3,9 @@
 
 <ul>
     <li><%= link_to "edit this article", edit_article_path(@article) %> </li>
+    <li><%= link_to "Destroy this article", article_path(@article), data: { 
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure ?"
+    } %> </li>
+    <%# yes, need article_path to get the id to destroy and change the http method from :get to :delete %>
 </ul>
