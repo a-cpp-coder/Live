@@ -14,6 +14,4 @@ Rails.application.routes.draw do
   resources :articles do # it's a ruby dsl(domain specific language), also in rails db, :articles is a symbol
     resources :comments
   end
-
-
 end
