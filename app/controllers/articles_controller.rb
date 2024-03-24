@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+  http_basic_authenticate_with name: "Huy", password: "Iam", except: [:index, :show]
+  # yeah, see the true meaning of symbol in bookmakr, here we passing 3 hash value (with its key, eg "Huy" with key :name, check the source of the method http_basic) into the method http_basic_authenticate_with
+
   def index
     @articles = Article.all # with s
   end
